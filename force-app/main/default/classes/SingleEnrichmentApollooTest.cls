@@ -9,7 +9,8 @@ private class SingleEnrichmentApollooTest {
                 LastName = 'TestLast' ,
                 Email = 'sam.maxwell@executivewg.com',
                 company ='test',
-                Is_Apollo_Verified__c =true
+                Is_Apollo_Verified__c =true,
+                JSON_Response__c=''
             );
             testLeads.add(leady);
         
@@ -25,7 +26,7 @@ private class SingleEnrichmentApollooTest {
         Test.stopTest();
 
         // Verify updated leads
-        List<Lead> updatedLeads = [SELECT Id, FirstName, LastName, Linkedin_URL__c, Title, State, Country,LeadSource,City, Company,Phone_New__c, annualrevenue, NumberOfEmployees, industry, Website FROM Lead where email ='sam.maxwell@executivewg.com'];
+        List<Lead> updatedLeads = [SELECT Id, FirstName,JSON_Response__c, LastName, Linkedin_URL__c, Title, State, Country,LeadSource,City, Company,Phone_New__c, annualrevenue, NumberOfEmployees, industry, Website FROM Lead];
         System.assertEquals(1, updatedLeads.size());
       for (Lead lead : updatedLeads) {
           
@@ -45,7 +46,7 @@ private class SingleEnrichmentApollooTest {
             // Create a fake HTTP response
             HttpResponse res = new HttpResponse();
             res.setHeader('Content-Type', 'application/json');
-            res.setBody('{"person": {"email": "sam.maxwell@executivewg.com","departments":["test Departments"],"contact": {"sanitized_phone": "+441245476666"}, "first_name": "John", "last_name": "Doe", "linkedin_url": "https://www.linkedin.com/in/johndoe", "title": "CEO", "state": "CA", "city": "San Francisco", "country": "USA", "annualRevenue": 1000000, "organization": {"name": "Acme Inc.", "facebook_url": "https://www.facebook.com/acme", "primary_phone": {"sanitized_number": "(123) 456-7890"}, "annual_revenue": 2000000, "estimated_num_employees": 50, "industry": "Technology", "website_url": "https://www.acme.com","technology_names":["test TEchnology"]}}}');
+            res.setBody('{"person": {"email": "sam.maxwell@executivewg.com","departments":["test Departments"],"contact": {"sanitized_phone": "+441245476666"}, "first_name": "","last_name":"", "linkedin_url": "https://www.linkedin.com/in/johndoe", "title": "CEO", "state": "CA", "city": "San Francisco", "country": "USA", "annualRevenue": 1000000, "organization": {"name": "Acme Inc.", "facebook_url": "https://www.facebook.com/acme", "primary_phone": {"sanitized_number": "(123) 456-7890"}, "annual_revenue": 2000000, "estimated_num_employees": 50, "industry": "Technology", "website_url": "https://www.acme.com","technology_names":["test TEchnology"]}}}');
             res.setStatusCode(200);
             return res;
         }
