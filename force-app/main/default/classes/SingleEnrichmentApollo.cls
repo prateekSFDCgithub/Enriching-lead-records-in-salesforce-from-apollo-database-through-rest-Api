@@ -1,7 +1,7 @@
 global class SingleEnrichmentApollo implements Database.Batchable<sObject>, Database.AllowsCallouts{
     global database.QueryLocator start(Database.BatchableContext bc) {
-        string emaill = 'sam.maxwell@executivewg.com';
-        return database.getQueryLocator('SELECT Email,Is_Apollo_Verified__c,FirstName,Phone,Website,is_enriched__c,LastName,technology_stack__c,JSON_Response__c,industry,annualRevenue,NumberOfEmployees,Linkedin_URL__c,Title,State,Country,City,Company FROM Lead where is_enriched__c !=true limit 400');
+       
+        return database.getQueryLocator('SELECT Email,Is_Apollo_Verified__c,FirstName,Phone,Website,is_enriched__c,LastName,technology_stack__c,JSON_Response__c,industry,annualRevenue,NumberOfEmployees,Linkedin_URL__c,Title,State,Country,City,Company FROM Lead where is_enriched__c !=true');
     }
     
     global void execute(Database.BatchableContext bc, List<Lead> leadList) {
