@@ -36,7 +36,12 @@ Field Mapping: Adjust the field mappings in the code as per your Salesforce inst
 Ensure that Salesforce instances have the necessary outbound network access to communicate with Apollo's API endpoint.
 Monitor debug logs for insights into API requests/responses and batch processing.
 
-**Created BY**
-**[Prateek Joshi]**
-**Contact Email**
-**[trzprateeksfdc@gmail.com]**
+**Facing any problem while implementing**
+
+**Connect With me**
+
+**Prateek Joshi**
+
+(**Freelance Salesforce Developer/Expert**)
+
+(**trzprateeksfdc@gmail.com**)
