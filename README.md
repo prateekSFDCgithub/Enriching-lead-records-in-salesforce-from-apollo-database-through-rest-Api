@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Salesforce Email Sender Component
 
 The Salesforce Email Sender Component is a powerful tool designed to streamline the process of sending emails within your Salesforce environment. With this versatile component, you can effortlessly send emails to your existing users' email addresses, as well as to any custom object email fields, all with just a few clicks.
@@ -19,3 +20,6 @@ The Salesforce Email Sender Component is a powerful tool designed to streamline 
 Experience the efficiency and convenience of the Salesforce Email Sender Component today. Improve your email communication workflows and enhance productivity within your Salesforce environment.
 Contact: prateekjoshi398@gmail.com
 
+=======
+# Enriching-lead-records-in-salesforce-from-apollo-database-through-rest-Api
+>>>>>>> 227cbb63e4b33014a134ff3d8445bf0201a8ec5e
