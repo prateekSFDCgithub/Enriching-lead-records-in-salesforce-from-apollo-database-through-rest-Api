@@ -31,7 +31,7 @@ Field Mapping: Adjust the field mappings in the code as per your Salesforce inst
 
 **Schedule:** Schedule the batch class to run at desired intervals to keep lead records up-to-date.
 
-#Notes
+**Notes**
 
 Ensure that Salesforce instances have the necessary outbound network access to communicate with Apollo's API endpoint.
 Monitor debug logs for insights into API requests/responses and batch processing.
