@@ -22,7 +22,7 @@ global class SingleEnrichmentApollo implements Database.Batchable<sObject>, Data
             }
         } 
         
-        leadData.put('api_key', 'M9lzg-xm37Q_ixMATO0W0Q');
+        leadData.put('api_key', 'Your_Api_KEy');
         String finalJSONBody = JSON.serialize(leadData);
         System.debug('Request Body: ' + finalJSONBody);
         
